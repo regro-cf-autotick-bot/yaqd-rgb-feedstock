@@ -1,5 +1,5 @@
 {% set name = "yaqd-rgb" %}
-{% set version = "2021.10.0" %}
+{% set version = "2022.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yaqd-rgb-{{ version }}.tar.gz
-  sha256: 1d8b0ec11c13f54e16ab651dc2922da5a866ff5334627ce7b4e055f802c26ac5
+  sha256: 8a5f57ae1fe97305590cc8833094562abf156dbcd7f026eebbc4c9910fd59795
 
 build:
   number: 0
