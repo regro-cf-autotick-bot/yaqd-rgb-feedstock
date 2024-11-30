@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yaqd-rgb-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/yaqd-rgb-{{ version }}.tar.gz
   sha256: 8a5f57ae1fe97305590cc8833094562abf156dbcd7f026eebbc4c9910fd59795
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yaqd-rgb-qmini = yaqd_rgb._rgb_qmini:RGBQmini.main
@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - flit
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - flit
     - pyusb
     - numpy
@@ -38,6 +38,7 @@ test:
     - yaqd-rgb-qmini --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://yaq.fyi
